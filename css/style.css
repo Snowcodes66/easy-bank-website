@@ -63,9 +63,9 @@ header{
     
 }
 .btn-request{
-    margin-top: 15px;
+    margin-top: 20px;
     margin-bottom: 10px;
-    margin-right: 50px;
+    margin-right: 5px;
     background-image: var(--primary-gradient-image--);
     color:var(--main-color--);
     width: 150px;
@@ -106,6 +106,7 @@ header{
     top: -10%;
     z-index: 1;
 }
+
 #section--1{
     background-color: var(--main-sec--);
     margin-top: -18%;
@@ -113,6 +114,10 @@ header{
     padding-left: 70px;
     padding-right: 70px;
     padding-bottom: 70px;
+    opacity: 0;
+    /* transform: translateX(-100%); */
+    transition: all 0.5s ease-in ;
+
 }
 
 .sec1-div h3{
@@ -132,16 +137,19 @@ header{
     margin-top: 30px;
 }
 .img-sec2{
-    width: 260px;
+    width: 300px;
 }
 
 #section--2{
     background-color: rgb(251, 253, 255);
     width: 100%;
     margin-top: -30px;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-bottom: 70px;
+    opacity: 0;
+    
+    transition: all 0.5s ease-in-out ;
 }
 .sec1-div-con p{
     font-size: 20px;
@@ -266,11 +274,26 @@ footer{
     nav{
         display: none;
         background-color:var(--main-color--);
-        width:50% ;
+        width:95%;
         position: absolute;
         top:130%;
-        left: 30%;
-
+        left:3%;
+        right:0%;
+        opacity: 0;
+        transition: all 1s ease-in-out;
+        cursor: pointer;
+    }
+    .ul-div li a{
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: var(--main-primary--);
+        font-weight: bold;
+    }
+    
+    .img-logo{
+        width: 8rem;
+        margin-top: 20px;
+        margin-left: 20px;
     }
     .fa-bars{
         display: block;
@@ -278,12 +301,16 @@ footer{
         margin-right: 10px;
         font-size: 36px;
         opacity: 1;
+        cursor: pointer;
         
     }
     .fa-close{
         display: none;
-        font-size: 50px;
+        font-size: 40px;
         margin-right: 10px;
+        margin-top: 10px;
+        opacity: 0.7;
+        cursor: pointer;
     }
      
     .nav-btn-req{
@@ -302,19 +329,26 @@ footer{
         margin-bottom:10px;
         padding-top: 10px;
         padding-bottom: 10px;
+        
     }
+    
     .bank-head{
         display: flex;
         flex-direction:column-reverse;
+        
+        
         
     }
     .text{
         text-align: center;
         margin-top: 20px;
+        margin: 0 auto;
+        
     }
     .text p{
         opacity: 0.6;
         font-size: 25px;
+        text-align: center;
     }
     .text-btn-request{
         width: 170px;
@@ -328,7 +362,7 @@ footer{
     .map{
         position: absolute;
         width: 75rem;
-        top: -15%;
+        top: -7%;
         left: -25%
         
     }
@@ -338,7 +372,7 @@ footer{
         margin-left: 100ren;
         left: 2%;
         z-index: 1;
-        margin-top: -34%;
+        margin-top: -30%;
     }
     #section--1{
         background-color: var(--main-sec--);
@@ -364,8 +398,8 @@ footer{
     }
     .img-sec2{
         width: 100%;
-        
     }
+    
     footer{
         display: block;
     }
@@ -395,6 +429,7 @@ footer{
     }
     .copy{
         margin-left: 60px;
+        text-align: center;
     }
     .copy p{
         padding-top: 0px;
@@ -418,7 +453,12 @@ footer{
         text-decoration: none;
     }
 
-
+    .copy .btn-request{
+        margin-right: 50px;
+    }
+    .copy p{
+        margin-right: 50px;
+    }
 
 
 

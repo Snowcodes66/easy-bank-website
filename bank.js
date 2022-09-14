@@ -61,14 +61,56 @@ header.observe(head)
 const faBars=document.querySelector('.fa-bars')
 const nav=document.querySelector('nav')
 const faClose=document.querySelector('.fa-close')
+const ulDiv=document.querySelector('.ul-div')
 
-faBars.addEventListener('click',function (params) {
+
+
+faBars.addEventListener('click',function (params) {  
     nav.style.display='block'
+    nav.style.opacity=1
+    
+        
+    
     faBars.style.display='none'
+    
     faClose.style.display='block'
     faClose.addEventListener('click',function (params) {
         nav.style.display='none'
         faClose.style.display='none'
         faBars.style.display='block'
     })
+})
+
+nav.addEventListener('click',function (e) {
+    e.preventDefault()
+     const link=e.target
+     const getAt=link.getAttribute('href')
+     console.log(getAt)
+    const select=document.querySelector(getAt)
+    select.scrollIntoView({behavior:'smooth'})
+  
+})
+const sections=document.querySelectorAll('section')
+const section2=document.getElementById('section--2')
+console.log(sections)
+const sectObser=(entries)=>{
+    const [entry]=entries
+    console.log(entry)
+    if (entry.isIntersecting) {
+        
+            entry.target.style.opacity=1
+        
+    
+    }
+}
+
+const sectObj={
+    root:null,
+    threshold:0.15
+}
+
+const sect=new IntersectionObserver(sectObser,sectObj)
+sections.forEach(function (section) {
+    sect.observe(section)
+    
 })
